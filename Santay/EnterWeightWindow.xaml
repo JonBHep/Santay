@@ -1,0 +1,54 @@
+﻿<Window x:Class="Santay.EnterWeightWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Enter weight" Height="300" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ContentRendered="Window_ContentRendered" ShowInTaskbar="False">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Margin="8 4" FontWeight="Medium">Date</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="8 4" FontWeight="Medium">Weight</TextBlock>
+        <DatePicker x:Name="DatepickerDate" VerticalAlignment="Top" Grid.Row="0" Grid.Column="1" Margin="8 4" SelectedDateChanged="datepickerDate_SelectedDateChanged" />
+        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal">
+            <TextBlock x:Name="TextboxInputStones" Margin="8 4" Width="40" VerticalAlignment="Top" />
+            <TextBlock Margin="8 4">stone</TextBlock>
+            <TextBlock x:Name="TextboxInputPounds" Margin="8 4" Width="40" VerticalAlignment="Top" />
+            <TextBlock Margin="8 4">pounds</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+            <TextBlock x:Name="TextboxInputPoundsOnly" Margin="8 4" Width="40" VerticalAlignment="Top" />
+            <TextBlock Margin="8 4">pounds</TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal">
+            <TextBox x:Name="InpKgTextBox" Margin="8 4" Width="40" VerticalAlignment="Top" TextChanged="textboxInpKg_TextChanged" />
+            <TextBlock Margin="8 4">kilograms</TextBlock>
+        </StackPanel>
+        <TextBlock Grid.Column="2" Grid.Row="4" VerticalAlignment="Top" TextAlignment="Center" Margin="4">BMI</TextBlock>
+        <TextBlock x:Name="TextblockResultDate" Grid.Row="0" Grid.Column="3" Margin="8 4">xxx</TextBlock>
+        <TextBlock x:Name="TextblockResultKilos" Grid.Column="3" Grid.Row="1" Margin="8 4">xxx</TextBlock>
+        <TextBlock x:Name="TextblockResultStLb" Grid.Column="3" Grid.Row="2" Margin="8 4">xxx</TextBlock>
+        <TextBlock x:Name="TextblockResultPounds" Grid.Column="3" Grid.Row="3" Margin="8 4">xxx</TextBlock>
+        <TextBlock x:Name="TextblockResultBmi" Grid.Column="3" Grid.Row="4" Margin="8 4">xxx</TextBlock>
+        <StackPanel Grid.Column="3" Grid.Row="5" Orientation="Horizontal">
+            <Button x:Name="ButtonSave" Width="80" Margin="8 4" HorizontalAlignment="Right" FontWeight="Bold" Click="buttonSave_Click">Save</Button>
+            <Button x:Name="ButtonCancel" Width="80" Margin="8 4" HorizontalAlignment="Right" IsCancel="True" Click="buttonCancel_Click">Cancel</Button>
+        </StackPanel>
+    </Grid>
+</Window>

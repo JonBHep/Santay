@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+        <ApplicationIcon>JH Aramis bleu reference.ico</ApplicationIcon>
+        <NeutralLanguage>en-GB</NeutralLanguage>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Page Remove="ListWaistWindow.xaml" />
+      <Page Remove="EnterWaistWindow.xaml" />
+      <Page Remove="FitnessMainWindow.xaml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="ListWaistWindow.xaml.cs" />
+      <Compile Remove="EnterWaistWindow.xaml.cs" />
+      <Compile Remove="FitnessMainWindow.xaml.cs" />
+    </ItemGroup>
+
+</Project>

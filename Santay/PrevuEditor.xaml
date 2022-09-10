@@ -1,0 +1,145 @@
+﻿<Window x:Class="Santay.PrevuEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Planner" Height="650" Width="1000" ShowInTaskbar="False" Background="Transparent" AllowsTransparency="True" WindowStyle="None" 
+        ContentRendered="PrevuWindow_OnContentRendered" Loaded="PrevuWindow_OnLoaded" >
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="DarkGreen" />
+            <Setter Property="Background" Value="Linen" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="MinHeight" Value="24" />
+            <Setter Property="MinWidth" Value="72" />
+            <Setter Property="Padding" Value="8 2 8 2" />
+        </Style>
+    </Window.Resources>
+    
+    <Border  CornerRadius="10" BorderBrush="DarkGreen" BorderThickness="2" Background="Honeydew">
+        
+        <Grid Margin="8" Height="Auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            
+            <DockPanel Grid.ColumnSpan="2" >
+                <Button VerticalAlignment="Center" DockPanel.Dock="Right" Height="24" Width="72" >Save</Button>
+                <Button VerticalAlignment="Center" DockPanel.Dock="Right" Height="24" Width="72" Margin="0 0 6 0" IsCancel="True">Cancel</Button>
+                <TextBlock FontFamily="American Stencil" VerticalAlignment="Center" Margin="12 0 0 0" FontSize="24" Foreground="DarkGreen">Forward date</TextBlock>
+            </DockPanel>
+            
+            <DockPanel Grid.Row="1" Grid.Column="0" LastChildFill="False">
+                <TextBlock VerticalAlignment="Center" FontSize="14" Foreground="DarkGreen" Margin="0 0 8 0">Date</TextBlock>
+                <ComboBox x:Name="DateComboBox" Width="256"  VerticalAlignment="Center" />    
+            </DockPanel>
+            
+            <DockPanel Grid.Row="2" Grid.Column="0" Margin="4 0 0 0" >
+                <DockPanel DockPanel.Dock="Top" Margin="4" LastChildFill="False" x:Name="ActionsPanel">
+                    <TextBlock VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkGreen" Margin="0 0 4 0" Width="108" >ACTIONS</TextBlock>
+                    <Button Margin="0 0 4 0" ToolTip="New action" Click="NewActionButton_OnClick">New</Button>
+                    <Button x:Name="EditActionButton" Margin="0 0 4 0" ToolTip="Edit selected action" >Edit</Button>
+                    <Button x:Name="DeleteActionButton" Margin="0 0 4 0"  ToolTip="Delete selected action" >Delete</Button>
+                </DockPanel>
+                <DockPanel DockPanel.Dock="Top" Margin="4" LastChildFill="False" x:Name="InfosPanel">
+                    <TextBlock VerticalAlignment="Center" FontWeight="Bold" Foreground="DarkGreen" Margin="0 0 4 0" Width="108" >INFOS</TextBlock>
+                    <Button Margin="0 0 4 0" ToolTip="New info" Click="NewInfoButton_OnClick">New</Button>
+                    <Button x:Name="EditInfoButton" Margin="0 0 4 0" ToolTip="Edit selected info" >Edit</Button>
+                    <Button x:Name="DeleteInfoButton" Margin="0 0 4 0"  ToolTip="Delete selected info" >Delete</Button>
+                </DockPanel>
+                <Border BorderBrush="Brown" BorderThickness="2" DockPanel.Dock="Top">
+                    <ListBox x:Name="DayListBox"></ListBox>
+                </Border>
+            </DockPanel>
+
+            <Border Grid.Column="1" Grid.Row="2" BorderBrush="Blue" BorderThickness="2" Padding="4">
+                <DockPanel LastChildFill="False">
+                <Border x:Name="ActionEditorBorder" DockPanel.Dock="Top" Margin="0 6 0 0" BorderBrush="ForestGreen" BorderThickness="1" Padding="6" CornerRadius="6">
+                    <Grid Height="Auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="27" />
+                        <RowDefinition Height="27" />
+                        <RowDefinition Height="27" />
+                        <RowDefinition Height="27" />
+                        <RowDefinition Height="128" />
+                        <RowDefinition Height="27" />
+                        <RowDefinition Height="27" />
+                    </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" FontFamily="Liberation Mono" VerticalAlignment="Center">Action</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="0" FontFamily="Liberation Mono" VerticalAlignment="Center">Start time</TextBlock>
+                        <DockPanel Grid.Column="1" Grid.Row="1">
+                            <ComboBox x:Name="StartHourComboBox" Width="56" VerticalAlignment="Center" />
+                            <TextBlock FontFamily="Liberation Mono" VerticalAlignment="Center" Margin="4 0">h</TextBlock>
+                            <ComboBox x:Name="StartMinuteComboBox" Width="56" VerticalAlignment="Center" />
+                            <TextBlock FontFamily="Liberation Mono" VerticalAlignment="Center" Margin="4 0">m</TextBlock>
+                        </DockPanel>
+                    <TextBlock Grid.Row="2" Grid.Column="0" FontFamily="Liberation Mono" VerticalAlignment="Center">End time</TextBlock>
+                        <DockPanel Grid.Column="1" Grid.Row="2">
+                            <ComboBox x:Name="EndHourComboBox" Width="56" VerticalAlignment="Center" />
+                            <TextBlock FontFamily="Liberation Mono" VerticalAlignment="Center" Margin="4 0">h</TextBlock>
+                            <ComboBox x:Name="EndMinuteComboBox" Width="56" VerticalAlignment="Center" />
+                            <TextBlock FontFamily="Liberation Mono" VerticalAlignment="Center" Margin="4 0">m</TextBlock>
+                        </DockPanel>
+                        
+                    <TextBlock Grid.Row="3" Grid.Column="0" FontFamily="Liberation Mono" VerticalAlignment="Center">Description</TextBlock>
+                        <TextBox x:Name="DescriptionTextBox" Grid.Row="3" Grid.Column="1" FontFamily="Liberation Mono" VerticalAlignment="Center" />
+            
+                    <TextBlock Grid.Row="4" Grid.Column="0" FontFamily="Liberation Mono" VerticalAlignment="Top" Margin="0 6 0 0">Notes</TextBlock>
+                        <TextBox x:Name="NotesTextBox" Grid.Row="4" Grid.Column="1" FontFamily="Liberation Mono" VerticalAlignment="Stretch" TextWrapping="Wrap" AcceptsReturn="False" AcceptsTab="False" />
+            
+                    <TextBlock Grid.Row="5" Grid.Column="0" FontFamily="Liberation Mono" VerticalAlignment="Center">Added to Outlook?</TextBlock>
+                        <CheckBox x:Name="OutlookCheckBox" Grid.Row="5" Grid.Column="1" IsThreeState="False" FontFamily="Liberation Mono" VerticalAlignment="Center" VerticalContentAlignment="Center" Content="Added" />
+            
+                    <DockPanel Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="0" LastChildFill="False">
+                            <Button x:Name="AddButton" DockPanel.Dock="Right" VerticalAlignment="Center">Add</Button>
+                            <Button DockPanel.Dock="Right" VerticalAlignment="Center" Margin="0 0 4 0" Click="ActionEditorCancelButton_OnClick">Cancel</Button>
+                    </DockPanel>
+            
+                </Grid>
+                </Border>
+                
+                <Border x:Name="InfoEditorBorder" DockPanel.Dock="Top" Margin="0 6 0 0" BorderBrush="ForestGreen" BorderThickness="1" 
+                        Padding="6" CornerRadius="6">
+                    <Grid Height="Auto">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="140" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="27" />
+                        <RowDefinition Height="27" />
+                        <RowDefinition Height="128" />
+                        <RowDefinition Height="27" />
+                    </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" FontFamily="Liberation Mono" VerticalAlignment="Center">Info</TextBlock>
+                    <TextBlock Grid.Row="1" Grid.Column="0" FontFamily="Liberation Mono" VerticalAlignment="Center">Description</TextBlock>
+                        <TextBox x:Name="InfoDescriptionTextBox" Grid.Row="1" Grid.Column="1" FontFamily="Liberation Mono" VerticalAlignment="Center" />
+            
+                    <TextBlock Grid.Row="2" Grid.Column="0" FontFamily="Liberation Mono" VerticalAlignment="Top" Margin="0 6 0 0">Notes</TextBlock>
+                        <TextBox x:Name="InfoNotesTextBox" Grid.Row="2" Grid.Column="1" FontFamily="Liberation Mono" VerticalAlignment="Stretch" TextWrapping="Wrap" AcceptsReturn="False" AcceptsTab="False" />
+            
+                    <DockPanel Grid.Row="3" Grid.ColumnSpan="2" Grid.Column="0" LastChildFill="False">
+                            <Button x:Name="AddInfoButton" DockPanel.Dock="Right" VerticalAlignment="Center" >Add</Button>
+                            <Button DockPanel.Dock="Right" VerticalAlignment="Center" Margin="0 0 4 0" Click="InfoEditorCancelButton_OnClick">Cancel</Button>
+                    </DockPanel>
+            
+                </Grid>
+                </Border>
+                </DockPanel>
+            </Border>
+                            
+        </Grid>
+    </Border>
+</Window>

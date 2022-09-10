@@ -1,0 +1,52 @@
+﻿<Window x:Class="Santay.EnterBloodPressureWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        mc:Ignorable="d"
+        Title="Enter blood pressure" Height="360" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock Margin="12" FontWeight="Bold" Grid.ColumnSpan="2" FontSize="16" FontFamily="Liberation Mono" Foreground="SaddleBrown" VerticalAlignment="Center">Blood pressure</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="0" Margin="12" FontWeight="Medium" VerticalAlignment="Center">Taken</TextBlock>
+        <TextBlock Margin="12" FontWeight="Medium" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center">Pressure</TextBlock>
+        <TextBlock Margin="12" FontWeight="Medium" Grid.Row="4" Grid.Column="0" VerticalAlignment="Center">Pulse</TextBlock>
+        
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock Margin="12">Date</TextBlock>
+            <TextBox x:Name="DateTextBox" Margin="12" Width="96" TextChanged="DateTextBox_OnTextChanged"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock Margin="12">Time</TextBlock>
+            <TextBox x:Name="TimeTextBox" Margin="12" Width="96" TextChanged="TimeTextBox_OnTextChanged"/>
+        </StackPanel>
+        <TextBlock x:Name="DateTextBloc" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="12" Text="?"/>
+        <TextBlock x:Name="TimeTextBloc" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Margin="12" Text="?" />
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center">
+            <TextBlock Margin="12">Systolic</TextBlock>
+            <TextBox x:Name="TextboxSystolic" Margin="12" Width="40" TextChanged="textboxSystolic_TextChanged" GotFocus="TextBoxNumeric_OnGotFocus" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Column="2" Grid.Row="3" VerticalAlignment="Center">
+            <TextBlock Margin="12">Diastolic</TextBlock>
+            <TextBox x:Name="TextboxDiastolic" Margin="12" Width="40" TextChanged="textboxDiastolic_TextChanged" GotFocus="TextBoxNumeric_OnGotFocus"/>
+        </StackPanel>
+        <TextBox x:Name="TextboxPulse" Grid.Column="1" Grid.Row="4"  Margin="12" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" TextChanged="textboxPulse_TextChanged" GotFocus="TextBoxNumeric_OnGotFocus"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center">
+            <Button x:Name="ButtonSave" Margin="12" Padding="12 4" Width="80" FontWeight="Bold" IsEnabled="False" Click="buttonSave_Click">Save</Button>
+            <Button  Margin="12" Padding="12 4" Width="80" Click="Button_Click" IsCancel="True">Cancel</Button>
+        </StackPanel>
+        <TextBlock Grid.Row="5" Grid.Column="2" Margin="12" FontWeight="Medium" VerticalAlignment="Center" Foreground="SaddleBrown">Time and pulse are optional</TextBlock>
+    </Grid>
+</Window>
