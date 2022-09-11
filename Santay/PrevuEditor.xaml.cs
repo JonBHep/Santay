@@ -13,15 +13,14 @@ public partial class PrevuEditor
         InitializeComponent();
         _journee = new PrevuDate(jour);
     }
-    public PrevuEditor()
-    {
-        InitializeComponent();
-        _journee = new PrevuDate();
-    }
     
     private readonly PrevuDate _journee;
+    private const int IndexOffset = 65536; // (2 to the power of 16)
+    
+    public string PrevuDateSpecification => _journee.Specification;
+    
 
-    private void PrevuWindow_OnLoaded(object sender, RoutedEventArgs e)
+    private void PrevuEditor_OnLoaded(object sender, RoutedEventArgs e)
     {
         var scrX = SystemParameters.PrimaryScreenWidth;
         var scrY = SystemParameters.PrimaryScreenHeight;
@@ -46,19 +45,19 @@ public partial class PrevuEditor
         DeleteInfoButton.IsEnabled = false;
 
         DayListBox.Items.Clear();
-
+        
+        _journee.Actions.Sort();
+        _journee.Infos.Sort();
+        
+        // List Box Item tags
+        // ListBoxItem for date heading is Hit Test Invisible
+        // ListBoxItem for Action has int = index
+        // ListBoxItem for Info has int IndexOffset + index
+        // index is negative for new item
+        
         var gap = _journee.EntryDate.DayNumber - DateToday.DayNumber;
 
         Brush pinceau = gap < 0 ? Brushes.Sienna : gap > 0 ? Brushes.Black : Brushes.Blue;
-
-        var outline = new Border()
-        {
-            CornerRadius = new CornerRadius(3), BorderBrush = pinceau, BorderThickness = new Thickness(2)
-            , Padding = new Thickness(8)
-        };
-        var dateDock = new DockPanel();
-        outline.Child = dateDock;
-        DayListBox.Items.Add(new ListBoxItem() {Content = outline});
 
         var dateBloc = new TextBlock()
         {
@@ -72,21 +71,20 @@ public partial class PrevuEditor
             gap < 0 ? $" {Math.Abs(gap)} days ago" : " TODAY";
 
         dateBloc.Inlines.Add(new Run() {Text = awayString, FontSize = 12, Foreground = Brushes.Magenta});
-
-        DockPanel.SetDock(dateBloc, Dock.Top);
-
-        foreach (var action in _journee.Actions)
+        
+        // add item showing date to listbox
+        DayListBox.Items.Add(new ListBoxItem() {Tag ="D",IsHitTestVisible =false, Content = new Border()
         {
-            var actionBorder = new Border()
-            {
-                CornerRadius = new CornerRadius(3), BorderBrush = pinceau, BorderThickness = new Thickness(1)
-                , Padding = new Thickness(8)
-            };
+            CornerRadius = new CornerRadius(3), BorderBrush = pinceau, BorderThickness = new Thickness(2)
+            , Padding = new Thickness(8), Child = dateBloc
+        }});
+        
+        for (var z=0; z< _journee.Actions.Count; z++)
+        {
+            var action = _journee.Actions[z];
+            
             var actionDock = new DockPanel();
-            actionBorder.Child = actionDock;
-            DockPanel.SetDock(actionBorder, Dock.Top);
-            dateDock.Children.Add(actionBorder);
-
+            
             if (action.StartTime > TimeOnly.MinValue)
             {
                 var timeBloc = new TextBlock()
@@ -137,20 +135,22 @@ public partial class PrevuEditor
 
             DockPanel.SetDock(outlookBloc, Dock.Top);
             actionDock.Children.Add(outlookBloc);
-        }
-
-        foreach (var info in _journee.Infos)
-        {
-            var infoBorder = new Border()
+            
+            var actionBorder = new Border()
             {
                 CornerRadius = new CornerRadius(3), BorderBrush = pinceau, BorderThickness = new Thickness(1)
-                , Padding = new Thickness(8)
+                , Padding = new Thickness(8), Child = actionDock
             };
-            var infoDock = new DockPanel();
-            infoBorder.Child = infoDock;
-            dateDock.Children.Add(infoBorder);
-            DockPanel.SetDock(infoBorder, Dock.Top);
+            
+            DayListBox.Items.Add(new ListBoxItem() {Tag =z, Content = actionBorder});
+        }
 
+        for (var z=0; z< _journee.Infos.Count; z++)
+        {
+            var info = _journee.Infos[z];
+            
+            var infoDock = new DockPanel();
+            
             var descriptionBloc = new TextBlock()
             {
                 FontFamily = new FontFamily("Liberation Mono"), FontSize = 16
@@ -160,7 +160,7 @@ public partial class PrevuEditor
             };
 
             DockPanel.SetDock(descriptionBloc, Dock.Top);
-            dateDock.Children.Add(descriptionBloc);
+            infoDock.Children.Add(descriptionBloc);
 
             if (!string.IsNullOrWhiteSpace(info.Notes))
             {
@@ -172,55 +172,35 @@ public partial class PrevuEditor
                 };
 
                 DockPanel.SetDock(notesBloc, Dock.Top);
-                dateDock.Children.Add(notesBloc);
+                infoDock.Children.Add(notesBloc);
             }
-
+            
+            var infoBorder = new Border()
+            {
+                CornerRadius = new CornerRadius(3), BorderBrush = pinceau, BorderThickness = new Thickness(1)
+                , Padding = new Thickness(8), Child = infoDock
+            };
+            
+            DayListBox.Items.Add(new ListBoxItem() {Tag=z+IndexOffset, Content = infoBorder});
         }
+
     }
 
-
-
-private void PrevuWindow_OnContentRendered(object? sender, EventArgs e)
+    private void PrevuEditor_OnContentRendered(object? sender, EventArgs e)
     {
+        PopulateTimeCombos();
         RefreshDayList();
-        PopulateDateAndTimesCombos();
-    }
-    
-
-    private void ClearEntryForm()
-    {
-        DateComboBox.SelectedIndex = 0;
-        StartHourComboBox.SelectedIndex = 0;
-        StartMinuteComboBox.SelectedIndex = 0;
-        EndHourComboBox.SelectedIndex = 0;
-        EndMinuteComboBox.SelectedIndex = 0;
-        DescriptionTextBox.Clear();
-        NotesTextBox.Clear();
-        OutlookCheckBox.IsChecked = false;
     }
 
-    private void FillEntryForm(PlannerEntry entry)
+    private void FillActionEntryForm(PrevuAction acta)
     {
         ComboBoxItem? target = null;
-        foreach (var item in DateComboBox.Items)
-        {
-            if (item is ComboBoxItem {Tag: DateOnly d} cItem)
-            {
-                if (d.Equals(entry.EntryDate))
-                {
-                    target = cItem;
-                }
-            }
-        }
-
-        DateComboBox.SelectedItem = target;
-
-        target = null;
+        
         foreach (var item in StartHourComboBox.Items)
         {
             if (item is ComboBoxItem {Tag: int shr} cItem)
             {
-                if (shr.Equals(entry.StartTime.Hour))
+                if (shr.Equals(acta.StartTime.Hour))
                 {
                     target = cItem;
                 }
@@ -234,7 +214,7 @@ private void PrevuWindow_OnContentRendered(object? sender, EventArgs e)
         {
             if (item is ComboBoxItem {Tag: int smn} cItem)
             {
-                if (smn.Equals(entry.StartTime.Minute))
+                if (smn.Equals(acta.StartTime.Minute))
                 {
                     target = cItem;
                 }
@@ -248,7 +228,7 @@ private void PrevuWindow_OnContentRendered(object? sender, EventArgs e)
         {
             if (item is ComboBoxItem {Tag: int ehr} cItem)
             {
-                if (ehr.Equals(entry.EndTime.Hour))
+                if (ehr.Equals(acta.EndTime.Hour))
                 {
                     target = cItem;
                 }
@@ -262,7 +242,7 @@ private void PrevuWindow_OnContentRendered(object? sender, EventArgs e)
         {
             if (item is ComboBoxItem {Tag: int emn} cItem)
             {
-                if (emn.Equals(entry.EndTime.Minute))
+                if (emn.Equals(acta.EndTime.Minute))
                 {
                     target = cItem;
                 }
@@ -271,34 +251,23 @@ private void PrevuWindow_OnContentRendered(object? sender, EventArgs e)
 
         EndMinuteComboBox.SelectedItem = target;
 
-        DescriptionTextBox.Text = entry.Description;
+        DescriptionTextBox.Text = acta.Description;
 
-        NotesTextBox.Text = entry.Notes;
+        NotesTextBox.Text = acta.Notes;
 
-        OutlookCheckBox.IsChecked = entry.AddedToOutlook;
+        OutlookCheckBox.IsChecked = acta.AddedToOutlook;
 
     }
-   
-    private void PopulateDateAndTimesCombos()
+    
+    private void FillInfoEntryForm(PrevuInfo info)
     {
-        DateComboBox.Items.Clear();
-        DateOnly dateO = DateOnly.FromDateTime(DateTime.Today);
-        int todayIndex = dateO.DayNumber;
-        while ((dateO.DayNumber - todayIndex) < 366)
-        {
-            bool weekend = Weekend(dateO);
-            DateComboBox.Items.Add(new ComboBoxItem()
-            {
-                Tag = dateO
-                , Content = new TextBlock()
-                {
-                    Text = $"{dateO:ddd dd MMM yyyy}", FontFamily = new FontFamily("Liberation Mono")
-                    , Foreground = weekend ? Brushes.Blue : Brushes.Black
-                }
-            });
-            dateO = dateO.AddDays(1);
-        }
+        InfoDescriptionTextBox.Text = info.Description;
 
+        InfoNotesTextBox.Text = info.Notes;
+    }
+   
+    private void PopulateTimeCombos()
+    {
         StartHourComboBox.Items.Clear();
         EndHourComboBox.Items.Clear();
         for (int hr = 0; hr < 24; hr++)
@@ -335,49 +304,26 @@ private void PrevuWindow_OnContentRendered(object? sender, EventArgs e)
         EndMinuteComboBox.SelectedIndex = 0;
     }
 
-    private PlannerEntry? HarvestPlannerEntry()
+    private PrevuAction? HarvestPrevuAction()
     {
-        var entry = new PlannerEntry();
-
-        if (DateComboBox.SelectedItem is ComboBoxItem {Tag: DateOnly when})
-        {
-            entry.EntryDate = when;
-        }
-        else
-        {
-            return null;
-        }
-
+        var entry = new PrevuAction();
+    
         if (StartHourComboBox.SelectedItem is ComboBoxItem {Tag: int startH})
         {
-            if (StartMinuteComboBox.SelectedItem is ComboBoxItem {Tag: int startM})
-            {
-                entry.StartTime = new TimeOnly(startH, startM);
-            }
-            else
-            {
-                return null;
-            }
+            entry.StartTime = StartMinuteComboBox.SelectedItem is ComboBoxItem {Tag: int startM} ? new TimeOnly(startH, startM) : new TimeOnly(startH, 0);
         }
         else
         {
-            return null;
+            entry.StartTime = new TimeOnly(0, 0);
         }
 
         if (EndHourComboBox.SelectedItem is ComboBoxItem {Tag: int endH})
         {
-            if (EndMinuteComboBox.SelectedItem is ComboBoxItem {Tag: int endM})
-            {
-                entry.EndTime = new TimeOnly(endH, endM);
-            }
-            else
-            {
-                return null;
-            }
+            entry.EndTime = EndMinuteComboBox.SelectedItem is ComboBoxItem {Tag: int endM} ? new TimeOnly(endH, endM) : new TimeOnly(endH, 0);
         }
         else
         {
-            return null;
+            entry.EndTime = new TimeOnly(0, 0);
         }
 
         var caption = DescriptionTextBox.Text.Trim();
@@ -389,29 +335,53 @@ private void PrevuWindow_OnContentRendered(object? sender, EventArgs e)
         entry.Description = caption;
 
         var comments = NotesTextBox.Text.Trim();
-        if (string.IsNullOrWhiteSpace(comments))
-        {
-            entry.Notes = string.Empty;
-        }
-        else
-        {
-            entry.Notes = comments;
-        }
+        entry.Notes = string.IsNullOrWhiteSpace(comments) ? string.Empty : comments;
 
         entry.AddedToOutlook = OutlookCheckBox.IsChecked ?? false;
         return entry;
     }
-
-    private static bool Weekend(DateOnly q)
+    
+    private PrevuInfo? HarvestPrevuInfo()
     {
-        return q.DayOfWeek is DayOfWeek.Saturday or DayOfWeek.Sunday;
-    }
+        var entry = new PrevuInfo();
+    
+        var caption = InfoDescriptionTextBox.Text.Trim();
+        if (string.IsNullOrWhiteSpace(caption))
+        {
+            return null;
+        }
 
+        entry.Description = caption;
+
+        var comments = InfoNotesTextBox.Text.Trim();
+        entry.Notes = string.IsNullOrWhiteSpace(comments) ? string.Empty : comments;
+
+        return entry;
+    }
+    
     private void NewActionButton_OnClick(object sender, RoutedEventArgs e)
     {
         SwitchButtonPanels(false);
         ActionEditorBorder.Visibility = Visibility.Visible;
         InfoEditorBorder.Visibility = Visibility.Collapsed;
+        ClearActionEntryForm();
+        ApplyActionButton.Tag = -1;
+    }
+
+    private void ClearActionEntryForm()
+    {
+        StartHourComboBox.SelectedIndex = 0;
+        StartMinuteComboBox.SelectedIndex = 0;
+        EndHourComboBox.SelectedIndex = 0;
+        EndMinuteComboBox.SelectedIndex = 0;
+        DescriptionTextBox.Clear();
+        NotesTextBox.Clear();
+        OutlookCheckBox.IsChecked = false;
+    }
+    private void ClearInfoEntryForm()
+    {
+        InfoDescriptionTextBox.Clear();
+        InfoNotesTextBox.Clear();
     }
 
     private void NewInfoButton_OnClick(object sender, RoutedEventArgs e)
@@ -419,11 +389,13 @@ private void PrevuWindow_OnContentRendered(object? sender, EventArgs e)
         SwitchButtonPanels(false);
         ActionEditorBorder.Visibility = Visibility.Collapsed;
         InfoEditorBorder.Visibility = Visibility.Visible;
+        ClearInfoEntryForm();
+        ApplyInfoButton.Tag = -1;
     }
 
     private void SwitchButtonPanels(bool live)
     {
-        InfosPanel.Opacity =ActionsPanel.Opacity= live ? 1 : 0.5;
+        InfosPanel.Opacity = ActionsPanel.Opacity = live ? 1 : 0.5;
         InfosPanel.IsEnabled = ActionsPanel.IsEnabled = live;
     }
 
@@ -438,4 +410,106 @@ private void PrevuWindow_OnContentRendered(object? sender, EventArgs e)
         InfoEditorBorder.Visibility = Visibility.Collapsed;
         SwitchButtonPanels(true);
     }
+
+    private void ApplyActionButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        if (ApplyActionButton.Tag is not int index) return;
+        var gathered = HarvestPrevuAction();
+        if (gathered is {})
+        {
+            if (index >= 0)
+            {
+                _journee.Actions.RemoveAt(index);
+            }
+            _journee.Actions.Add(gathered);
+            _journee.Actions.Sort();
+            ActionEditorBorder.Visibility = Visibility.Collapsed;
+            SwitchButtonPanels(true);
+            RefreshDayList();
+        }
+        else
+        {
+            MessageBox.Show("Incomplete", "Action", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+        }
+    }
+
+    private void ApplyInfoButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        if (ApplyInfoButton.Tag is not int index) return;
+        var gathered = HarvestPrevuInfo();
+        if (gathered is { })
+        {
+            if (index >= 0)
+            {
+                _journee.Infos.RemoveAt(index);
+            }
+            _journee.Infos.Add(gathered);
+            _journee.Actions.Sort();
+            InfoEditorBorder.Visibility = Visibility.Collapsed;
+            SwitchButtonPanels(true);
+            RefreshDayList();
+        }
+        else
+        {
+            MessageBox.Show("Incomplete", "Info", MessageBoxButton.OK, MessageBoxImage.Asterisk);
+        }
+    }
+   
+    private void SaveButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        DialogResult = true;
+    }
+
+    private void DayListBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
+    {
+        if (DayListBox.SelectedItem is not (ListBoxItem {Tag: int tag})) return;
+        if (tag >= IndexOffset)
+        {
+            var index = tag-IndexOffset;
+            EditActionButton.IsEnabled = DeleteActionButton.IsEnabled =false;
+            EditInfoButton.Tag = DeleteInfoButton.Tag = index;
+            EditInfoButton.IsEnabled = DeleteInfoButton.IsEnabled = true;
+        }
+        else
+        {
+            EditActionButton.IsEnabled = DeleteActionButton.IsEnabled = true;
+            EditActionButton.Tag = DeleteActionButton.Tag = tag;
+            EditInfoButton.IsEnabled = DeleteInfoButton.IsEnabled = false;
+        }
+    }
+
+    private void EditActionButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        if (EditActionButton.Tag is not int index) return;
+        SwitchButtonPanels(false);
+        ActionEditorBorder.Visibility = Visibility.Visible;
+        InfoEditorBorder.Visibility = Visibility.Collapsed;
+        ClearActionEntryForm();
+        FillActionEntryForm(_journee.Actions[index]);
+        ApplyActionButton.Tag = index;
+    }
+    private void EditInfoButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        if (EditInfoButton.Tag is not int index) return;
+        SwitchButtonPanels(false);
+        ActionEditorBorder.Visibility = Visibility.Collapsed;
+        InfoEditorBorder.Visibility = Visibility.Visible;
+        ClearInfoEntryForm();
+        FillInfoEntryForm(_journee.Infos[index]);
+        ApplyInfoButton.Tag = index;
+    }
+
+    private void DeleteActionButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        if (DeleteActionButton.Tag is not int index) return;
+        _journee.Actions.RemoveAt(index);
+        RefreshDayList();
+    }
+    private void DeleteInfoButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        if (DeleteInfoButton.Tag is not int index) return;
+        _journee.Infos.RemoveAt(index);
+        RefreshDayList();
+    }
+    
 }

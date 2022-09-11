@@ -16,8 +16,6 @@ namespace Santay;
 public partial class JournalWindow
 {
     
-    // TODO Improve Report to show blood pressure and weights
-    
     public JournalWindow()
     {
         InitializeComponent();

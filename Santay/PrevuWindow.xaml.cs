@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -16,12 +17,26 @@ public partial class PrevuWindow
     public PrevuWindow()
     {
         InitializeComponent();
-        _schedule = new List<PrevuDate>();
+        _forecast = new Dictionary<int, PrevuDate>();
     }
 
-    private readonly List<PrevuDate> _schedule;
+    private readonly Dictionary<int, PrevuDate> _forecast;
 
-    private void PlannerWindow_OnLoaded(object sender, RoutedEventArgs e)
+    private void PurgeEmptyDays()
+    {
+        var empties = new List<int>();
+        foreach (var key in _forecast.Keys)
+        {
+            if (_forecast[key].Empty){empties.Add(key);}
+        }
+
+        foreach (var empty in empties)
+        {
+            _forecast.Remove(empty);
+        }
+    } 
+    
+    private void PrevuWindow_OnLoaded(object sender, RoutedEventArgs e)
     {
         var scrX = SystemParameters.PrimaryScreenWidth;
         var scrY = SystemParameters.PrimaryScreenHeight;
@@ -41,14 +56,14 @@ public partial class PrevuWindow
         var path = Path.Combine(Jbh.AppManager.DataPath, "Data.prevu");
         if (File.Exists(path))
         {
-            _schedule.Clear();
+            _forecast.Clear();
             using var reader = new StreamReader(path);
             while (!reader.EndOfStream)
             {
                 var j = reader.ReadLine();
                 if (j is null) continue;
                 var log = new PrevuDate() {Specification = j};
-                _schedule.Add(log);
+                _forecast.Add(log.EntryDate.DayNumber, log);
             }
         }
     }
@@ -59,10 +74,12 @@ public partial class PrevuWindow
         Jbh.AppManager.CreateBackupDataFile(path);
         Jbh.AppManager.PurgeOldBackups("prevu", 10, 10);
         using var writer = new StreamWriter(path);
-        _schedule.Sort();
-
-        foreach (var log in _schedule)
+        var dateKeys = _forecast.Keys.ToList();
+        dateKeys.Sort();
+        
+        foreach (var key in dateKeys)
         {
+            var log = _forecast[key];
             writer.WriteLine(log.Specification);
         }
     }
@@ -78,7 +95,8 @@ public partial class PrevuWindow
     {
         EditDateButton.IsEnabled = false;
         DeletePastButton.IsEnabled = false;
-
+        var wid = PrevuListBox.ActualWidth - 40;
+        PurgeEmptyDays();
         var hasPast = false;
 
         PrevuListBox.Items.Clear();
@@ -89,23 +107,26 @@ public partial class PrevuWindow
         var doneCatchUp = false;
         var counter = -1;
 
-        foreach (var prevuDate in _schedule)
+        var keys = _forecast.Keys.ToList();
+        keys.Sort();
+        foreach (var dateKey in keys)
         {
+            var jour = _forecast[dateKey];
             counter++;
 
-            if (!prevuDate.Empty)
+            if (!jour.Empty)
             {
-                if (prevuDate.InfoOnly)
+                if (jour.InfoOnly)
                 {
-                    infoDates.Add(prevuDate.EntryDate.DayNumber);
+                    infoDates.Add(jour.EntryDate.DayNumber);
                 }
                 else
                 {
-                    busyDates.Add(prevuDate.EntryDate.DayNumber);
+                    busyDates.Add(jour.EntryDate.DayNumber);
                 }
             }
 
-            var gap = prevuDate.EntryDate.DayNumber - DateToday.DayNumber;
+            var gap = jour.EntryDate.DayNumber - DateToday.DayNumber;
 
             if (gap < 0)
             {
@@ -117,7 +138,7 @@ public partial class PrevuWindow
                 if (!doneCatchUp)
                 {
                     var moment = DateToday;
-                    while (moment.DayNumber < prevuDate.EntryDate.DayNumber)
+                    while (moment.DayNumber < jour.EntryDate.DayNumber)
                     {
                         PrevuListBox.Items.Add(new ListBoxItem()
                         {
@@ -142,42 +163,40 @@ public partial class PrevuWindow
             // colour for past, present, future dates
             Brush pinceau = gap < 0 ? Brushes.Sienna : gap > 0 ? Brushes.Black : Brushes.Blue;
 
-            var outline = new Border()
+            var dateDock = new DockPanel();
+            PrevuListBox.Items.Add(new ListBoxItem() {Tag = counter, Content = new Border()
             {
                 CornerRadius = new CornerRadius(3), BorderBrush = pinceau, BorderThickness = new Thickness(2)
-                , Padding = new Thickness(8)
-            };
-            var dateDock = new DockPanel();
-            outline.Child = dateDock;
-            PrevuListBox.Items.Add(new ListBoxItem() {Tag = counter, Content = outline});
+                , Padding = new Thickness(8), Child = dateDock, Width = wid
+            }});
 
-            var dateBloc = new TextBlock()
+            var whenBloc = new TextBlock()
             {
                 FontFamily = new FontFamily("Comic Sans MS"), FontSize = 16, Foreground = pinceau
                 , Margin = new Thickness(0, 0, 0, 8)
-                , Text = $"{prevuDate.EntryDate:ddd dd MMM yyyy} "
+                , Text = $"{jour.EntryDate:ddd dd MMM yyyy} "
             };
 
             var awayString = gap == 1 ? " TOMORROW" :
                 gap > 0 ? $" {gap} days away" :
                 gap < 0 ? $" {Math.Abs(gap)} days ago" : " TODAY";
 
-            dateBloc.Inlines.Add(new Run() {Text = awayString, FontSize = 12, Foreground = Brushes.Magenta});
+            whenBloc.Inlines.Add(new Run() {Text = awayString, FontSize = 12, Foreground = Brushes.Magenta});
+            DockPanel.SetDock(whenBloc, Dock.Top);
+            dateDock.Children.Add(whenBloc);
 
-            DockPanel.SetDock(dateBloc, Dock.Top);
-
-            foreach (var action in prevuDate.Actions)
+            foreach (var action in jour.Actions)
             {
-                var actionBorder = new Border()
+                var actionDock = new DockPanel();
+                var actionBorder=new Border()
                 {
                     CornerRadius = new CornerRadius(3), BorderBrush = pinceau, BorderThickness = new Thickness(1)
-                    , Padding = new Thickness(8)
+                    , Padding = new Thickness(8), Child = actionDock, Background = Brushes.CornflowerBlue
                 };
-                var actionDock = new DockPanel();
-                actionBorder.Child = actionDock;
+                
                 DockPanel.SetDock(actionBorder, Dock.Top);
                 dateDock.Children.Add(actionBorder);
-
+                
                 if (action.StartTime > TimeOnly.MinValue)
                 {
                     var timeBloc = new TextBlock()
@@ -197,7 +216,7 @@ public partial class PrevuWindow
                 var descriptionBloc = new TextBlock()
                 {
                     FontFamily = new FontFamily("Liberation Mono"), FontSize = 16
-                    , Foreground = prevuDate.InfoOnly ? Brushes.SeaGreen : Brushes.OrangeRed
+                    , Foreground = jour.InfoOnly ? Brushes.SeaGreen : Brushes.OrangeRed
                     , Text = action.Description
                     , TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 8, 0, 8)
                 };
@@ -230,28 +249,29 @@ public partial class PrevuWindow
                 actionDock.Children.Add(outlookBloc);
             }
 
-            foreach (var info in prevuDate.Infos)
+            foreach (var info in jour.Infos)
             {
+                var infoDock = new DockPanel();
+                
                 var infoBorder = new Border()
                 {
                     CornerRadius = new CornerRadius(3), BorderBrush = pinceau, BorderThickness = new Thickness(1)
-                    , Padding = new Thickness(8)
+                    , Padding = new Thickness(8),Child =infoDock, Background = Brushes.LightYellow, Margin = new Thickness(0, 4 ,0 ,4)
                 };
-                var infoDock = new DockPanel();
-                infoBorder.Child = infoDock;
-                dateDock.Children.Add(infoBorder);
+                
                 DockPanel.SetDock(infoBorder, Dock.Top);
-
+                dateDock.Children.Add(infoBorder);
+                
                 var descriptionBloc = new TextBlock()
                 {
                     FontFamily = new FontFamily("Liberation Mono"), FontSize = 16
-                    , Foreground = prevuDate.InfoOnly ? Brushes.SeaGreen : Brushes.OrangeRed
+                    , Foreground = jour.InfoOnly ? Brushes.SeaGreen : Brushes.OrangeRed
                     , Text = info.Description
                     , TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 8, 0, 8)
                 };
 
                 DockPanel.SetDock(descriptionBloc, Dock.Top);
-                dateDock.Children.Add(descriptionBloc);
+                infoDock.Children.Add(descriptionBloc);
 
                 if (!string.IsNullOrWhiteSpace(info.Notes))
                 {
@@ -263,7 +283,7 @@ public partial class PrevuWindow
                     };
 
                     DockPanel.SetDock(notesBloc, Dock.Top);
-                    dateDock.Children.Add(notesBloc);
+                    infoDock.Children.Add(notesBloc);
                 }
 
             }
@@ -304,8 +324,9 @@ public partial class PrevuWindow
         DeletePastButton.IsEnabled = hasPast;
     }
 
-    private void PlannerWindow_OnContentRendered(object? sender, EventArgs e)
+    private void PrevuWindow_OnContentRendered(object? sender, EventArgs e)
     {
+        PopulateDateCombo();
         RefreshCalendar();
     }
 
@@ -321,20 +342,19 @@ public partial class PrevuWindow
         while (target >= 0)
         {
             target = -1;
-            for (int index = 0; index < _schedule.Count; index++)
+            foreach (var key in _forecast.Keys)
             {
-                if (_schedule[index].EntryDate < DateToday)
+                if (_forecast[key].EntryDate < DateToday)
                 {
-                    target = index;
+                    target = key;
                 }
             }
 
             if (target >= 0)
             {
-                _schedule.RemoveAt(target);
+                _forecast.Remove(target);
             }
         }
-
         RefreshCalendar();
     }
 
@@ -345,13 +365,55 @@ public partial class PrevuWindow
 
     private void EditDateButton_OnClick(object sender, RoutedEventArgs e)
     {
-        throw new NotImplementedException();
+        if (EditDateButton.Tag is not DateOnly when) return;
+        var jour = new PrevuDate(){EntryDate = when};
+        if (_forecast.ContainsKey(when.DayNumber))
+        {
+            jour = _forecast[when.DayNumber];
+        }
+        var editor = new PrevuEditor(jour){Owner = this};
+        var returnValue = editor.ShowDialog();
+        if (!(returnValue ?? false)) return;
+
+        if (_forecast.ContainsKey(when.DayNumber))
+        {
+            _forecast[when.DayNumber].Specification = editor.PrevuDateSpecification;
+        }
+        else
+        {
+            var pd = new PrevuDate() {Specification = editor.PrevuDateSpecification};
+            _forecast.Add(when.DayNumber, pd);
+        }
+        RefreshCalendar();
     }
 
-    private void NewDateButton_OnClick(object sender, RoutedEventArgs e)
+    private void DateComboBox_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
     {
-        var edwin = new PrevuEditor() {Owner = this};
-        _ = edwin.ShowDialog();
+        EditDateButton.IsEnabled = false;
+        if (DateComboBox.SelectedItem is not ComboBoxItem {Tag: DateOnly when}) return;
+        EditDateButton.Tag = when;
+        EditDateButton.IsEnabled = true;
+    }
+    
+    private void PopulateDateCombo()
+    {
+        DateComboBox.Items.Clear();
+        var dateO = DateOnly.FromDateTime(DateTime.Today);
+        var todayIndex = dateO.DayNumber;
+        while (dateO.DayNumber - todayIndex < 366)
+        {
+            bool weekend = Weekend(dateO);
+            DateComboBox.Items.Add(new ComboBoxItem()
+            {
+                Tag = dateO
+                , Content = new TextBlock()
+                {
+                    Text = $"{dateO:ddd dd MMM yyyy}", FontFamily = new FontFamily("Liberation Mono")
+                    , Foreground = weekend ? Brushes.Blue : Brushes.Black
+                }
+            });
+            dateO = dateO.AddDays(1);
+        }
     }
     
 }

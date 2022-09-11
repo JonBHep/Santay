@@ -73,7 +73,7 @@ namespace Santay
 
         private void DiaryButton_Click(object sender, RoutedEventArgs e)
         {
-            PrevuWindow w = new PrevuWindow() {Owner = this};
+            var w = new PrevuWindow() {Owner = this};
             _ = w.ShowDialog();
         }
         

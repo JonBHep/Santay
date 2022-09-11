@@ -4,7 +4,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         mc:Ignorable="d"
-       Title="Planner" Height="650" Width="1000" ShowInTaskbar="False" Background="Transparent" AllowsTransparency="True" WindowStyle="None" ContentRendered="PlannerWindow_OnContentRendered" Loaded="PlannerWindow_OnLoaded" Closing="PrevuWindow_OnClosing">
+       Title="Planner" Height="650" Width="1000" ShowInTaskbar="False" Background="Transparent" AllowsTransparency="True" WindowStyle="None"
+        ContentRendered="PrevuWindow_OnContentRendered" Loaded="PrevuWindow_OnLoaded" Closing="PrevuWindow_OnClosing">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Foreground" Value="DarkGreen" />
@@ -29,17 +30,20 @@
             
             <DockPanel >
                 <Button VerticalAlignment="Center" DockPanel.Dock="Right" Height="24" Width="72" IsCancel="True">Close</Button>
+                <Button x:Name="DeletePastButton" VerticalAlignment="Center" DockPanel.Dock="Right" Margin="0 0 8 0" Height="24" Width="108" ToolTip="Delete past entries" Click="DeletePastAppointmentButton_OnClick">Delete past</Button>
                 <TextBlock FontFamily="American Stencil" VerticalAlignment="Center" Margin="12 0 0 0" FontSize="24" Foreground="DarkGreen">Forward planner</TextBlock>
             </DockPanel>
             
             <DockPanel Grid.Row="1" Margin="4 0 0 0" LastChildFill="False">
                 <DockPanel DockPanel.Dock="Top" Margin="4" LastChildFill="False">
-                    <Button Margin="0 0 4 0" ToolTip="New date" Click="NewDateButton_OnClick">New</Button>
-                    <Button x:Name="EditDateButton" Margin="0 0 4 0" ToolTip="Edit selected appointment" Click="EditDateButton_OnClick">Edit</Button>
-                    <Button x:Name="DeletePastButton" Margin="0 0 4 0"  ToolTip="Delete past appointments" Click="DeletePastAppointmentButton_OnClick">Delete past</Button>
+                    <TextBlock VerticalAlignment="Center" FontSize="14" Foreground="DarkGreen" Margin="0 0 8 0">Date</TextBlock>
+                    <ComboBox x:Name="DateComboBox" Width="256"  VerticalAlignment="Center" SelectionChanged="DateComboBox_OnSelectionChanged" />    
+                    <Button x:Name="EditDateButton" Margin="6 0 6 0" ToolTip="Edit selected appointment" Click="EditDateButton_OnClick">Edit</Button>
                 </DockPanel>
             </DockPanel>
-            <Canvas x:Name="BlobCanvas" Grid.Row="2" Height="24" Background="Gold" Margin="4 2"></Canvas>
+            
+            <Canvas x:Name="BlobCanvas" Grid.Row="2" Height="24" Margin="4 2"></Canvas>
+            
             <Border Grid.Row="3" BorderBrush="Brown" BorderThickness="2" CornerRadius="4" >
                 <ListBox x:Name="PrevuListBox" Margin="4"/>    
             </Border>

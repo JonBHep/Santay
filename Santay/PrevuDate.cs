@@ -46,7 +46,7 @@ public class PrevuDate
             
             if (int.TryParse(parts[0], out var ls))
             {
-                EntryDate=DateOnly.FromDayNumber(ls);
+                EntryDate = DateOnly.FromDayNumber(ls);
             }
 
             ActionSpecifications = parts[1];
@@ -69,8 +69,9 @@ public class PrevuDate
         }
         set
         {
-            var parts = value.Split(PrevuDate.ItemMarker.ToCharArray());
             Actions.Clear();
+            if (string.IsNullOrWhiteSpace(value)) return;
+            var parts = value.Split(PrevuDate.ItemMarker.ToCharArray());
             foreach (var part in parts)
             {
                 Actions.Add(new PrevuAction(){Specification = part});
@@ -93,8 +94,9 @@ public class PrevuDate
         }
         set
         {
-            var parts = value.Split(PrevuDate.ItemMarker.ToCharArray());
             Infos.Clear();
+            if (string.IsNullOrWhiteSpace(value)) return;
+            var parts = value.Split(PrevuDate.ItemMarker.ToCharArray());
             foreach (var part in parts)
             {
                 Infos.Add(new PrevuInfo(){Specification = part});
