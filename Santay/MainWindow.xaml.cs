@@ -47,11 +47,11 @@ namespace Santay
             win.ShowDialog();
         }
 
-        private void PlannerButton_Click(object sender, RoutedEventArgs e)
-        {
-            PlannerWindow win = new PlannerWindow() {Owner = this};
-            win.ShowDialog();
-        }
+        // private void PlannerButton_Click(object sender, RoutedEventArgs e)
+        // {
+        //     PlannerWindow win = new PlannerWindow() {Owner = this};
+        //     win.ShowDialog();
+        // }
 
         private void WeightButton_Click(object sender, RoutedEventArgs e)
         {

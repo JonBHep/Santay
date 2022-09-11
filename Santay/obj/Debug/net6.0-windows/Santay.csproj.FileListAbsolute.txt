@@ -54,8 +54,6 @@ C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Debug\net6
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Debug\net6.0-windows\ListBloodPressureWindow.baml
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Debug\net6.0-windows\ListWeightWindow.baml
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Debug\net6.0-windows\RatiosWindow.baml
-C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Debug\net6.0-windows\PlannerWindow.g.cs
-C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Debug\net6.0-windows\PlannerWindow.baml
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Debug\net6.0-windows\PrevuWindow.baml
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Debug\net6.0-windows\PrevuWindow.g.cs
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Debug\net6.0-windows\PrevuEditor.baml

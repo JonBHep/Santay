@@ -13,12 +13,15 @@
       <Page Remove="ListWaistWindow.xaml" />
       <Page Remove="EnterWaistWindow.xaml" />
       <Page Remove="FitnessMainWindow.xaml" />
+      <Page Remove="PlannerWindow.xaml" />
     </ItemGroup>
 
     <ItemGroup>
       <Compile Remove="ListWaistWindow.xaml.cs" />
       <Compile Remove="EnterWaistWindow.xaml.cs" />
       <Compile Remove="FitnessMainWindow.xaml.cs" />
+      <Compile Remove="PlannerEntry.cs" />
+      <Compile Remove="PlannerWindow.xaml.cs" />
     </ItemGroup>
 
 </Project>

@@ -190,8 +190,8 @@ public partial class PrevuWindow
                 var actionDock = new DockPanel();
                 var actionBorder=new Border()
                 {
-                    CornerRadius = new CornerRadius(3), BorderBrush = pinceau, BorderThickness = new Thickness(1)
-                    , Padding = new Thickness(8), Child = actionDock, Background = Brushes.CornflowerBlue
+                    CornerRadius = new CornerRadius(3), BorderBrush = Brushes.DarkRed, BorderThickness = new Thickness(1)
+                    , Padding = new Thickness(8), Child = actionDock, Background = Brushes.Pink
                 };
                 
                 DockPanel.SetDock(actionBorder, Dock.Top);
@@ -201,7 +201,7 @@ public partial class PrevuWindow
                 {
                     var timeBloc = new TextBlock()
                     {
-                        FontFamily = new FontFamily("Liberation Mono"), FontSize = 16, Foreground = pinceau
+                        FontFamily = new FontFamily("Liberation Mono"), FontSize = 16, Foreground = Brushes.DarkRed
                         , Text = $"{action.StartTime:HH.mm}"
                     };
                     if (action.EndTime > action.StartTime)
@@ -228,7 +228,7 @@ public partial class PrevuWindow
                 {
                     var notesBloc = new TextBlock()
                     {
-                        FontFamily = new FontFamily("Liberation Mono"), Foreground = pinceau, Text = action.Notes
+                        FontFamily = new FontFamily("Liberation Mono"), Foreground = Brushes.DarkRed, Text = action.Notes
                         , Margin = new Thickness(0, 0, 0, 8)
                         , TextWrapping = TextWrapping.Wrap
                     };
@@ -255,7 +255,7 @@ public partial class PrevuWindow
                 
                 var infoBorder = new Border()
                 {
-                    CornerRadius = new CornerRadius(3), BorderBrush = pinceau, BorderThickness = new Thickness(1)
+                    CornerRadius = new CornerRadius(3), BorderBrush = Brushes.DarkOrange, BorderThickness = new Thickness(1)
                     , Padding = new Thickness(8),Child =infoDock, Background = Brushes.LightYellow, Margin = new Thickness(0, 4 ,0 ,4)
                 };
                 
@@ -265,7 +265,7 @@ public partial class PrevuWindow
                 var descriptionBloc = new TextBlock()
                 {
                     FontFamily = new FontFamily("Liberation Mono"), FontSize = 16
-                    , Foreground = jour.InfoOnly ? Brushes.SeaGreen : Brushes.OrangeRed
+                    , Foreground = Brushes.SeaGreen
                     , Text = info.Description
                     , TextWrapping = TextWrapping.Wrap, Margin = new Thickness(0, 8, 0, 8)
                 };
@@ -277,7 +277,7 @@ public partial class PrevuWindow
                 {
                     var notesBloc = new TextBlock()
                     {
-                        FontFamily = new FontFamily("Liberation Mono"), Foreground = pinceau, Text = info.Notes
+                        FontFamily = new FontFamily("Liberation Mono"), Foreground = Brushes.SeaGreen, Text = info.Notes
                         , Margin = new Thickness(0, 0, 0, 8)
                         , TextWrapping = TextWrapping.Wrap
                     };
