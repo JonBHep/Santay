@@ -54,8 +54,6 @@ C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Release\ne
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Release\net6.0-windows\Santay.pdb
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Release\net6.0-windows\Santay.genruntimeconfig.cache
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Release\net6.0-windows\ref\Santay.dll
-C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Release\net6.0-windows\PlannerWindow.baml
-C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Release\net6.0-windows\PlannerWindow.g.cs
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Release\net6.0-windows\PrevuEditor.baml
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Release\net6.0-windows\PrevuWindow.baml
 C:\Jbh.Original\Jbh.Info\Code\WPF\Current\Reference\Santay\Santay\obj\Release\net6.0-windows\PrevuEditor.g.cs

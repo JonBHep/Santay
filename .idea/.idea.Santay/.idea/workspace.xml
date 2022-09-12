@@ -4,57 +4,42 @@
     <projectFile>Santay/Santay.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="298a5ad1-1135-4c07-ad98-a8fed13508e0" name="Changes" comment="Implemented crude Prevu diary">
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0bn30hnw_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0bn30hnw_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0bn30hnw_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0bn30hnw_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_2m2vb3co_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_2m2vb3co_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_2m2vb3co_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_2m2vb3co_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_3bqc3amp_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_3bqc3amp_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_3bqc3amp_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_3bqc3amp_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_b3i2r2oz_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_b3i2r2oz_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_b3i2r2oz_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_b3i2r2oz_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_g1ow0uv3_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_g1ow0uv3_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_g1ow0uv3_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_g1ow0uv3_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jjgo4hki_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jjgo4hki_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jjgo4hki_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jjgo4hki_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_opl4yzhf_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_opl4yzhf_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_opl4yzhf_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_opl4yzhf_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_phwglluy_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_phwglluy_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_phwglluy_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_phwglluy_wpftmp.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/MainWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/MainWindow.xaml.cs" afterDir="false" />
+    <list default="true" id="298a5ad1-1135-4c07-ad98-a8fed13508e0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_nwqa0mf0_wpftmp.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_nwqa0mf0_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_nwqa0mf0_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_nwqa0mf0_wpftmp.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Santay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Santay/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/PrevuWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/PrevuWindow.xaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/PrevuWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/PrevuWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/Santay.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/Santay.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/bin/Debug/net6.0-windows/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/bin/Debug/net6.0-windows/Santay.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/bin/Debug/net6.0-windows/Santay.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/bin/Debug/net6.0-windows/Santay.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/MainWindow.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/MainWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PlannerWindow.baml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PlannerWindow.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/bin/Release/net6.0-windows/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/bin/Release/net6.0-windows/Santay.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/bin/Release/net6.0-windows/Santay.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/bin/Release/net6.0-windows/Santay.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PrevuWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PrevuWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PrevuWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PrevuWindow.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.g.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_MarkupCompile.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/ref/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/ref/Santay.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/refint/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/refint/Santay.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/BaladeWindow.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/MainWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/MainWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/PlannerWindow.baml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/PlannerWindow.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/PrevuEditor.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/PrevuEditor.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/PrevuEditor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/PrevuEditor.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/PrevuWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/PrevuWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/PrevuWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/PrevuWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay_MarkupCompile.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/ref/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/ref/Santay.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/refint/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/refint/Santay.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,10 +47,8 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Jbh.Original/Jbh.Info/Code/WPF/Current/Reference/Santay/Santay/JournalWindow.xaml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0bn30hnw_wpftmp.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_nwqa0mf0_wpftmp.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5a91db30f58fd3c38afed3d8a755e224ceb184a67a2afe38d3b89dff2dc7e86/EventRoute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/6c25a91b8726fea745b2d41cf81816979584a140cb4a6ca48cd7149fc4e969c0/RoutedEventArgs.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/73514912be7bd625b54b51fa89cb1d95e8cb8ca1fedcc66d4f17bdd8e6dca/ComponentDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
@@ -82,13 +65,16 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2EZUPLaEivO3D2IafrEFH8Z3m2c" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
@@ -129,7 +115,8 @@
       <workItem from="1662877188241" duration="5630000" />
       <workItem from="1662889012594" duration="3069000" />
       <workItem from="1662894732235" duration="645000" />
-      <workItem from="1662930310538" duration="5906000" />
+      <workItem from="1662930310538" duration="6057000" />
+      <workItem from="1662960398123" duration="7481000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented crude Prevu diary">
       <created>1662936394330</created>
@@ -138,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662936394330</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Removed old Planner">
+      <created>1662936913847</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1662936913847</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,8 +152,10 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Implemented crude Prevu diary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented crude Prevu diary" />
+    <MESSAGE value="Removed old Planner" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed old Planner" />
   </component>
 </project>
