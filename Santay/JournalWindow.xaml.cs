@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -30,12 +31,14 @@ public partial class JournalWindow
     private const string DayLogSeparator = "~";
     private const string ListSeparator = "$";
     private const string MedSeparator = "^";
+    // TODO Ensure these are not entered in text boxes
 
     private readonly FontFamily _fixedFont = new("Consolas");
     
     private Dictionary<int, DayLog> _logDictionary;
     private readonly List<Medicament> _tempMedicaments;
-    private bool _currentDayEdited;
+    private bool _symptomsEdited;
+    private bool _suppressDayLogUpdate;
 
     private readonly DateOnly _aujourdhui; // fixed per run
     private DateOnly _currentDate; // variable
@@ -59,7 +62,6 @@ public partial class JournalWindow
         public int DynamicDaysSinceBedChange { get; set; }
         public int DynamicDaysSinceExercise { get; set; }
         public bool DynamicBloodPressureMeasured => (_jData.DayTensions(DateOnly.FromDayNumber(DateIndex)).Count>0);
-
         public bool ChemoCycle { get; set; }
         public bool ChemoDayOne { get; set; }
         public bool BedChanged { get; set; }
@@ -158,7 +160,7 @@ public partial class JournalWindow
         {
             get
             {
-                PersonProfile.Weight? heavy = _jData.DayWeight(DateOnly.FromDayNumber(DateIndex));
+                var heavy = _jData.DayWeight(DateOnly.FromDayNumber(DateIndex));
                 return heavy?.WgtKilograms ?? 0;
             }
         }
@@ -356,7 +358,7 @@ public partial class JournalWindow
             // Repeat last loaded 'in chemo cycle' value onto subsequent days
             if (lastLoaded > 0)
             {
-                for (int z = lastLoaded + 1; z <= omega; z++)
+                for (var z = lastLoaded + 1; z <= omega; z++)
                 {
                     _logDictionary[z].ChemoCycle = lastChemoValue;
                 }
@@ -452,18 +454,6 @@ public partial class JournalWindow
 
     private void CloseButton_OnClick(object sender, RoutedEventArgs e)
     {
-        if (_currentDayEdited)
-        {
-            MessageBoxResult answer = MessageBox.Show("The current day has been edited! Close window regardless?"
-                , "Changing date"
-                , MessageBoxButton.OKCancel, MessageBoxImage.Question);
-            if (answer == MessageBoxResult.Cancel)
-            {
-                return;
-            }
-        }
-
-        SaveData();
         DialogResult = true;
     }
 
@@ -476,17 +466,6 @@ public partial class JournalWindow
 
     private void MinusButton_OnClick(object sender, RoutedEventArgs e)
     {
-        if (_currentDayEdited)
-        {
-            MessageBoxResult answer = MessageBox.Show("The current day has been edited! Change date regardless?"
-                , "Changing date"
-                , MessageBoxButton.OKCancel, MessageBoxImage.Question);
-            if (answer == MessageBoxResult.Cancel)
-            {
-                return;
-            }
-        }
-
         if (_currentDate.Equals(_originDate))
         {
             return;
@@ -501,16 +480,16 @@ public partial class JournalWindow
 
     private void PlusButton_OnClick(object sender, RoutedEventArgs e)
     {
-        if (_currentDayEdited)
-        {
-            MessageBoxResult answer = MessageBox.Show("The current day has been edited! Change date regardless?"
-                , "Changing date"
-                , MessageBoxButton.OKCancel, MessageBoxImage.Question);
-            if (answer == MessageBoxResult.Cancel)
-            {
-                return;
-            }
-        }
+        // if (_currentDayEdited)
+        // {
+        //     MessageBoxResult answer = MessageBox.Show("The current day has been edited! Change date regardless?"
+        //         , "Changing date"
+        //         , MessageBoxButton.OKCancel, MessageBoxImage.Question);
+        //     if (answer == MessageBoxResult.Cancel)
+        //     {
+        //         return;
+        //     }
+        // }
 
         if (DaysAgo(_currentDate) < 1)
         {
@@ -537,10 +516,60 @@ public partial class JournalWindow
         return count;
     }
 
-    private void UpdateButton_OnClick(object sender, RoutedEventArgs e)
+    // private void UpdateButton_OnClick(object sender, RoutedEventArgs e)
+    // {
+    //     bool chemCycle = ChemoCheckBox.IsChecked ?? false;
+    //     bool chemFirst = ChemoDayOneCheckBox.IsChecked ?? false;
+    //
+    //     if (chemFirst && !chemCycle)
+    //     {
+    //         MessageBox.Show("Chemo cycle Day One ticked without Chemo Cycle ticked", "Inconsistent", MessageBoxButton.OK
+    //             , MessageBoxImage.Information);
+    //         return;
+    //     }
+    //
+    //     DayLog log = new DayLog
+    //     {
+    //         DateIndex = _currentDate.DayNumber, DateLabel = DateSignificanceBox.Text.Trim(), // e.g. Chemo Cycle 2 Day 4
+    //         SymptomsAndActions = SymptomsAndActionsTextBox.Text.Trim()
+    //         , Pooed = PooCheckBox.IsChecked ?? false
+    //         , ChemoCycle = chemCycle
+    //         , ChemoDayOne = chemFirst
+    //         , Exercised = ExerciseCheckBox.IsChecked ?? false
+    //         , BedChanged = BedCheckBox.IsChecked ?? false
+    //     };
+    //
+    //     log.MedsTaken.Clear();
+    //     foreach (var tempMedicament in _tempMedicaments)
+    //     {
+    //         log.MedsTaken.Add(tempMedicament);
+    //     }
+    //
+    //     if (_logDictionary.ContainsKey(log.DateIndex))
+    //     {
+    //         DayLog existing = _logDictionary[log.DateIndex];
+    //         if (existing.Specification != log.Specification)
+    //         {
+    //             _logDictionary[log.DateIndex].Specification = log.Specification;
+    //         }
+    //     }
+    //     else
+    //     {
+    //         _logDictionary.Add(log.DateIndex, log);
+    //     }
+    //
+    //     _currentDayEdited = false;
+    //     WarningBorderTop.Background = WarningBorder.Background = Brushes.LightGreen;
+    //     RefreshJournalListBox();
+    //     RefreshMedicamentNamesCombo();
+    // }
+    
+    private void UpdateCurrentDay()
     {
-        bool chemCycle = ChemoCheckBox.IsChecked ?? false;
-        bool chemFirst = ChemoDayOneCheckBox.IsChecked ?? false;
+        if (_suppressDayLogUpdate) return; // avoid saving data from form while populating form!
+        
+        var chemCycle = ChemoCheckBox.IsChecked ?? false;
+        var chemFirst = ChemoDayOneCheckBox.IsChecked ?? false;
 
         if (chemFirst && !chemCycle)
         {
@@ -549,7 +578,7 @@ public partial class JournalWindow
             return;
         }
 
-        DayLog log = new DayLog
+        var log = new DayLog
         {
             DateIndex = _currentDate.DayNumber, DateLabel = DateSignificanceBox.Text.Trim(), // e.g. Chemo Cycle 2 Day 4
             SymptomsAndActions = SymptomsAndActionsTextBox.Text.Trim()
@@ -579,8 +608,7 @@ public partial class JournalWindow
             _logDictionary.Add(log.DateIndex, log);
         }
 
-        _currentDayEdited = false;
-        WarningBorderTop.Background = WarningBorder.Background = Brushes.LightGreen;
+        //WarningBorderTop.Background = WarningBorder.Background = Brushes.LightGreen;
         RefreshJournalListBox();
         RefreshMedicamentNamesCombo();
     }
@@ -822,7 +850,7 @@ public partial class JournalWindow
         var newMed = new Medicament(medName, medNumber, medSpan);
         _tempMedicaments.Add(newMed);
         RefreshMedicamentsList();
-        SetDayDataChanged();
+        UpdateCurrentDay();
     }
 
     private static bool ContainsProhibitedChar(string testString)
@@ -874,7 +902,7 @@ public partial class JournalWindow
         var i = MedicamentsListBox.SelectedIndex;
         if (i < 0) return;
         _tempMedicaments.RemoveAt(i);
-        SetDayDataChanged();
+        UpdateCurrentDay();
         RefreshMedicamentsList();
     }
 
@@ -885,6 +913,8 @@ public partial class JournalWindow
 
     private void PopulateLeftPane()
     {
+        _suppressDayLogUpdate = true;
+        
         // Clear entry text and combo boxes
         MedicamentNameCombo.Text = string.Empty;
         MedicamentQuantityCombo.SelectedIndex = 0;
@@ -924,24 +954,25 @@ public partial class JournalWindow
             RefreshMedicamentsList();
         }
 
-        _currentDayEdited = false;
-        WarningBorderTop.Background = WarningBorder.Background = Brushes.LightGreen;
+        _suppressDayLogUpdate = false;
+        //WarningBorderTop.Background = WarningBorder.Background = Brushes.LightGreen;
     }
 
-    private void SetDayDataChanged()
-    {
-        _currentDayEdited = true;
-        WarningBorderTop.Background = WarningBorder.Background = Brushes.Red;
-    }
+    // private void SetDayDataChanged()
+    // {
+    //     // _currentDayEdited = true;
+    //     //WarningBorderTop.Background = WarningBorder.Background = Brushes.Red;
+    //     UpdateCurrentDay();
+    // }
 
     private void DayData_Changed(object sender, TextChangedEventArgs e)
     {
-        SetDayDataChanged();
+        UpdateCurrentDay();
     }
 
     private void PooCheckBox_OnChecked(object sender, RoutedEventArgs e)
     {
-        SetDayDataChanged();
+        UpdateCurrentDay();
     }
 
     private void BlockReportTicked(string rubric, bool value, DockPanel trueFrame, DockPanel falseFrame)
@@ -958,7 +989,7 @@ public partial class JournalWindow
 
     private void SymptomsAndActionsTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
     {
-        SetDayDataChanged();
+        _symptomsEdited = true;
     }
 
     private void ReportButton_OnClick(object sender, RoutedEventArgs e)
@@ -1075,4 +1106,23 @@ public partial class JournalWindow
         var selected = _tempMedicaments[i];
         MedicamentNameCombo.Text = selected.Name;
     }
+
+    private void SymptomsAndActionsTextBox_OnGotFocus(object sender, RoutedEventArgs e)
+    {
+        _symptomsEdited = false;
+    }
+
+    private void SymptomsAndActionsTextBox_OnLostFocus(object sender, RoutedEventArgs e)
+    {
+        if (_symptomsEdited)
+        {
+            UpdateCurrentDay();
+        }
+    }
+
+    private void JournalWindow_OnClosing(object? sender, CancelEventArgs e)
+    {
+        SaveData();
+    }
+    
 }

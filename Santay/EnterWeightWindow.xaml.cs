@@ -38,6 +38,7 @@ public partial class EnterWeightWindow
         TextblockResultKilos.Text = string.Empty;
         TextblockResultPounds.Text = string.Empty;
         TextblockResultStLb.Text = string.Empty;
+        InpKgTextBox.Focus();
     }
 
     private void DisplayValues()
