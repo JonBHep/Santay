@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Jbh.Original\\Jbh.Info\\Code\\WPF\\Current\\Reference\\Santay\\Santay\\Santay.csproj": {}
+    "C:\\Jbh.Original\\Jbh.Info\\Code\\Jbh.Apps\\CSharp-WPF-NET6\\Utile\\Santay\\Santay\\Santay.csproj": {}
   },
   "projects": {
-    "C:\\Jbh.Original\\Jbh.Info\\Code\\WPF\\Current\\Reference\\Santay\\Santay\\Santay.csproj": {
+    "C:\\Jbh.Original\\Jbh.Info\\Code\\Jbh.Apps\\CSharp-WPF-NET6\\Utile\\Santay\\Santay\\Santay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Jbh.Original\\Jbh.Info\\Code\\WPF\\Current\\Reference\\Santay\\Santay\\Santay.csproj",
+        "projectUniqueName": "C:\\Jbh.Original\\Jbh.Info\\Code\\Jbh.Apps\\CSharp-WPF-NET6\\Utile\\Santay\\Santay\\Santay.csproj",
         "projectName": "Santay",
-        "projectPath": "C:\\Jbh.Original\\Jbh.Info\\Code\\WPF\\Current\\Reference\\Santay\\Santay\\Santay.csproj",
+        "projectPath": "C:\\Jbh.Original\\Jbh.Info\\Code\\Jbh.Apps\\CSharp-WPF-NET6\\Utile\\Santay\\Santay\\Santay.csproj",
         "packagesPath": "C:\\Users\\jonat\\.nuget\\packages\\",
-        "outputPath": "C:\\Jbh.Original\\Jbh.Info\\Code\\WPF\\Current\\Reference\\Santay\\Santay\\obj\\",
+        "outputPath": "C:\\Jbh.Original\\Jbh.Info\\Code\\Jbh.Apps\\CSharp-WPF-NET6\\Utile\\Santay\\Santay\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jonat\\AppData\\Roaming\\NuGet\\NuGet.Config",

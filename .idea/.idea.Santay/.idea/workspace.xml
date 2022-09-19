@@ -5,239 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="298a5ad1-1135-4c07-ad98-a8fed13508e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0ldf0xss_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0ldf0xss_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0ldf0xss_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0ldf0xss_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0vgyyoqr_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0vgyyoqr_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0vgyyoqr_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0vgyyoqr_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0zeftpca_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0zeftpca_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0zeftpca_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0zeftpca_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_14gdenlo_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_14gdenlo_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_14gdenlo_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_14gdenlo_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_2hbk0uzr_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_2hbk0uzr_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_2hbk0uzr_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_2hbk0uzr_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_42c1bp0v_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_42c1bp0v_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_42c1bp0v_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_42c1bp0v_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_4kt2vfkk_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_4kt2vfkk_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_4kt2vfkk_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_4kt2vfkk_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5250cvme_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5250cvme_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5250cvme_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5250cvme_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5ax1vu3u_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5ax1vu3u_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5ax1vu3u_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5ax1vu3u_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5lgxlbee_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5lgxlbee_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5lgxlbee_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5lgxlbee_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5retrjww_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5retrjww_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5retrjww_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_5retrjww_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_bk1aeypx_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_bk1aeypx_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_bk1aeypx_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_bk1aeypx_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dbuoaebg_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dbuoaebg_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dbuoaebg_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dbuoaebg_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dd1jidwc_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dd1jidwc_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dd1jidwc_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dd1jidwc_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dqhcrrsb_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dqhcrrsb_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dqhcrrsb_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dqhcrrsb_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dvxlwnsi_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dvxlwnsi_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dvxlwnsi_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dvxlwnsi_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_eedhfhvb_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_eedhfhvb_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_eedhfhvb_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_eedhfhvb_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_g2lmp5ga_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_g2lmp5ga_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_g2lmp5ga_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_g2lmp5ga_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_gtg1pqum_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_gtg1pqum_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_gtg1pqum_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_gtg1pqum_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_h025vnsq_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_h025vnsq_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_h025vnsq_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_h025vnsq_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_h1iqgqqd_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_h1iqgqqd_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_h1iqgqqd_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_h1iqgqqd_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_hoxevkmd_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_hoxevkmd_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_hoxevkmd_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_hoxevkmd_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ib3wnj3q_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ib3wnj3q_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ib3wnj3q_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ib3wnj3q_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jdoxk5w1_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jdoxk5w1_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jdoxk5w1_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jdoxk5w1_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jjwizj1d_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jjwizj1d_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jjwizj1d_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_jjwizj1d_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_js4su25e_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_js4su25e_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_js4su25e_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_js4su25e_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_kcftby1k_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_kcftby1k_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_kcftby1k_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_kcftby1k_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_lgfa0a3j_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_lgfa0a3j_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_lgfa0a3j_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_lgfa0a3j_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_lt25t3nd_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_lt25t3nd_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_lt25t3nd_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_lt25t3nd_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ms1s2r0i_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ms1s2r0i_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ms1s2r0i_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ms1s2r0i_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_muo1vaef_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_muo1vaef_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_muo1vaef_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_muo1vaef_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_mwvwr5h0_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_mwvwr5h0_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_mwvwr5h0_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_mwvwr5h0_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_nlo3k24n_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_nlo3k24n_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_nlo3k24n_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_nlo3k24n_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_oi4xbil4_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_oi4xbil4_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_oi4xbil4_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_oi4xbil4_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_oz20ay40_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_oz20ay40_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_oz20ay40_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_oz20ay40_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_p0yca4t4_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_p0yca4t4_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_p0yca4t4_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_p0yca4t4_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_r3k0ibjf_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_r3k0ibjf_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_r3k0ibjf_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_r3k0ibjf_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_s5iu022v_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_s5iu022v_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_s5iu022v_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_s5iu022v_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_sw0samhw_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_sw0samhw_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_sw0samhw_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_sw0samhw_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_u5k4p1um_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_u5k4p1um_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_u5k4p1um_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_u5k4p1um_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_uawlig13_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_uawlig13_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_uawlig13_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_uawlig13_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_w1153crr_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_w1153crr_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_w1153crr_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_w1153crr_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_wlfwjy24_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_wlfwjy24_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_wlfwjy24_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_wlfwjy24_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_xgydoepc_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_xgydoepc_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_xgydoepc_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_xgydoepc_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_zpouusgm_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_zpouusgm_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_zpouusgm_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_zpouusgm_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_zwvrhrob_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_zwvrhrob_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_zwvrhrob_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_zwvrhrob_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay_43xtc0lf_wpftmp.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay_43xtc0lf_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay_43xtc0lf_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay_43xtc0lf_wpftmp.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Santay_2hbk0uzr_wpftmp.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Santay_2hbk0uzr_wpftmp.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Santay/obj/Santay_2hbk0uzr_wpftmp.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0gehnuxu_wpftmp.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0gehnuxu_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0gehnuxu_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0gehnuxu_wpftmp.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dyc3eti5_wpftmp.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dyc3eti5_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dyc3eti5_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_dyc3eti5_wpftmp.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_rpjt2l22_wpftmp.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_rpjt2l22_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_rpjt2l22_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_rpjt2l22_wpftmp.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ulbcrn2m_wpftmp.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ulbcrn2m_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ulbcrn2m_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_ulbcrn2m_wpftmp.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay_tniisjxc_wpftmp.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay_tniisjxc_wpftmp.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay_tniisjxc_wpftmp.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Santay/obj/Release/net6.0-windows/Santay_tniisjxc_wpftmp.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Santay/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Santay/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/EnterWeightWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/EnterWeightWindow.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/JournalWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/JournalWindow.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/JournalWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/JournalWindow.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/EnterBloodPressureWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/EnterBloodPressureWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/EnterBloodPressureWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/EnterBloodPressureWindow.xaml.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/bin/Debug/net6.0-windows/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/bin/Debug/net6.0-windows/Santay.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/bin/Debug/net6.0-windows/Santay.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/bin/Debug/net6.0-windows/Santay.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/bin/Debug/net6.0-windows/Santay.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/bin/Debug/net6.0-windows/Santay.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/App.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/App.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/BaladeWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/BaladeWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/BuWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/BuWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/DateEntryTextBox.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/DateEntryTextBox.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/DayStatsWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/DayStatsWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/DistanceWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/DistanceWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/EnterBloodPressureWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/EnterBloodPressureWindow.baml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/EnterBloodPressureWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/EnterBloodPressureWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/EnterWeightWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/EnterWeightWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/FitnessPlotterWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/FitnessPlotterWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/GeneratedInternalTypeHelper.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/GeneratedInternalTypeHelper.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/GymWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/GymWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/InputBox.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/InputBox.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/JournalWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/JournalWindow.baml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/JournalWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/JournalWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/ListBloodPressureWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/ListBloodPressureWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/ListWeightWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/ListWeightWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/MainWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PaintingWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PaintingWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PeriodStatsWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PeriodStatsWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PrevuEditor.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PrevuEditor.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PrevuWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/PrevuWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/RatiosWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/RatiosWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.genruntimeconfig.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_MarkupCompile.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/VeloMainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/VeloMainWindow.g.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/apphost.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/ref/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/ref/Santay.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/refint/Santay.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/refint/Santay.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_MarkupCompile.lref" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_MarkupCompile.lref" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/Santay.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Santay.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Santay/obj/Santay.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/Santay.csproj.nuget.g.props" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/project.nuget.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Santay/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/Santay/obj/project.packagespec.json" afterDir="false" />
@@ -256,7 +61,9 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/App.g.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0bn30hnw_wpftmp.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0gehnuxu_wpftmp.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_0zeftpca_wpftmp.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Santay/obj/Debug/net6.0-windows/Santay_nwqa0mf0_wpftmp.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5a91db30f58fd3c38afed3d8a755e224ceb184a67a2afe38d3b89dff2dc7e86/EventRoute.cs" root0="FORCE_HIGHLIGHTING" />
@@ -328,7 +135,8 @@
       <workItem from="1662930310538" duration="6057000" />
       <workItem from="1662960398123" duration="7557000" />
       <workItem from="1662971396016" duration="454000" />
-      <workItem from="1663148578067" duration="4261000" />
+      <workItem from="1663148578067" duration="4480000" />
+      <workItem from="1663582596166" duration="695000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented crude Prevu diary">
       <created>1662936394330</created>
@@ -351,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662968439309</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Automated day data update in Journal">
+      <created>1663154228058</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1663154228058</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -376,6 +191,7 @@
     <MESSAGE value="Implemented crude Prevu diary" />
     <MESSAGE value="Removed old Planner" />
     <MESSAGE value="Improved display of planner" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved display of planner" />
+    <MESSAGE value="Automated day data update in Journal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Automated day data update in Journal" />
   </component>
 </project>

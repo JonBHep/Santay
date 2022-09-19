@@ -32,8 +32,8 @@
             <TextBlock Margin="12">Time</TextBlock>
             <TextBox x:Name="TimeTextBox" Margin="12" Width="96" TextChanged="TimeTextBox_OnTextChanged"/>
         </StackPanel>
-        <TextBlock x:Name="DateTextBloc" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="12" Text="?"/>
-        <TextBlock x:Name="TimeTextBloc" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Margin="12" Text="?" />
+        <TextBlock x:Name="DateTextBloc" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="12" Text="?" FontWeight="Black"/>
+        <TextBlock x:Name="TimeTextBloc" Grid.Column="2" Grid.Row="2" VerticalAlignment="Center" Margin="12" Text="?" FontWeight="Black" />
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center">
             <TextBlock Margin="12">Systolic</TextBlock>
             <TextBox x:Name="TextboxSystolic" Margin="12" Width="40" TextChanged="textboxSystolic_TextChanged" GotFocus="TextBoxNumeric_OnGotFocus" />
@@ -44,8 +44,8 @@
         </StackPanel>
         <TextBox x:Name="TextboxPulse" Grid.Column="1" Grid.Row="4"  Margin="12" Width="40" HorizontalAlignment="Left" VerticalAlignment="Center" TextChanged="textboxPulse_TextChanged" GotFocus="TextBoxNumeric_OnGotFocus"/>
         <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center">
-            <Button x:Name="ButtonSave" Margin="12" Padding="12 4" Width="80" FontWeight="Bold" IsEnabled="False" Click="buttonSave_Click">Save</Button>
-            <Button  Margin="12" Padding="12 4" Width="80" Click="Button_Click" IsCancel="True">Cancel</Button>
+            <Button x:Name="ButtonSave" Margin="12 0 0 0" VerticalAlignment="Center" Width="72" Height="25" FontWeight="Bold" IsEnabled="False" Click="buttonSave_Click">Save</Button>
+            <Button  Margin="12 0 0 0" Width="72" Height="25" VerticalAlignment="Center" Click="Button_Click" IsCancel="True">Cancel</Button>
         </StackPanel>
         <TextBlock Grid.Row="5" Grid.Column="2" Margin="12" FontWeight="Medium" VerticalAlignment="Center" Foreground="SaddleBrown">Time and pulse are optional</TextBlock>
     </Grid>

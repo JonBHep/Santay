@@ -137,6 +137,8 @@ public partial class EnterBloodPressureWindow
     private void TimeTextBox_OnTextChanged(object sender, TextChangedEventArgs e)
     {
         var entered = TimeTextBox.Text.Trim();
+        entered = entered.Replace('.', ':'); // replace stop or space by colon to facilitate time recognition
+        entered = entered.Replace(' ', ':');
         if (TimeOnly.TryParse(entered, out var myTime))
         {
             TimeTextBloc.Text = myTime.ToShortTimeString();
